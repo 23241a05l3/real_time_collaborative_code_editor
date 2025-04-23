@@ -6,7 +6,12 @@ const { Server } = require('socket.io');
 const ACTIONS = require('./src/Actions');
 
 const server = http.createServer(app);
-const io = new Server(server);
+const io = new Server(server, {
+    cors: {
+        origin: '*',
+        methods: ['GET', 'POST']
+    }
+});
 
 app.use(express.static('build'));
 app.use((req, res, next) => {
@@ -48,6 +53,14 @@ io.on('connection', (socket) => {
 
     socket.on(ACTIONS.SYNC_CODE, ({ socketId, code }) => {
         io.to(socketId).emit(ACTIONS.CODE_CHANGE, { code });
+    });
+
+    socket.on(ACTIONS.LANGUAGE_CHANGE, ({ roomId, language }) => {
+        socket.in(roomId).emit(ACTIONS.LANGUAGE_CHANGE, { language });
+    });
+
+    socket.on(ACTIONS.SYNC_LANGUAGE, ({ socketId, language }) => {
+        io.to(socketId).emit(ACTIONS.LANGUAGE_CHANGE, { language });
     });
 
     socket.on('disconnecting', () => {
