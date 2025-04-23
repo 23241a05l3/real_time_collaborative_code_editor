@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/real_time_collaborative_code_editor/static/css/main.4c3cbead.css",
+    "main.js": "/real_time_collaborative_code_editor/static/js/main.05d31499.js",
+    "static/js/787.4a5f9ec1.chunk.js": "/real_time_collaborative_code_editor/static/js/787.4a5f9ec1.chunk.js",
+    "index.html": "/real_time_collaborative_code_editor/index.html",
+    "main.4c3cbead.css.map": "/real_time_collaborative_code_editor/static/css/main.4c3cbead.css.map",
+    "main.05d31499.js.map": "/real_time_collaborative_code_editor/static/js/main.05d31499.js.map",
+    "787.4a5f9ec1.chunk.js.map": "/real_time_collaborative_code_editor/static/js/787.4a5f9ec1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4c3cbead.css",
+    "static/js/main.05d31499.js"
+  ]
+}
