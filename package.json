@@ -2,7 +2,7 @@
   "name": "realtime-editor",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://23241a05l3.github.io/real_time_collaborative_code_editor",
+  "homepage": ".",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^12.1.5",
